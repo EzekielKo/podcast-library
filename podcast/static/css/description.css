@@ -1,0 +1,262 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* NAVBAR Styling */
+
+
+/* HEADER Styling */
+
+.header-container {
+  margin-left:250px;
+  min-width:calc(100vw - 250px);
+}
+.header-container #main{
+  min-width:calc(100vw - 250px);
+  text-align:center;
+  margin: auto;
+}
+
+#header, #PDheader {
+  background:black;
+  color: white;
+  border-bottom: 1px solid #e0e4e8;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin-right:0;
+}
+
+.copyright {
+  color: white;
+  font-size: 0.9em;
+}
+
+.description {
+  margin-left: 20px;
+}
+
+.podcastdescription, .descriptionabout, .homepage-podcasts-label {
+  text-align: center;
+}
+
+.descriptionabout, .homepage-podcasts-label {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.homepage-podcasts-label{
+    margin-top:1em;
+}
+
+.podcast-search-header{
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.PDbody {
+    display: flex;
+    flex-direction: row;
+    margin-top:1em;
+    margin-left:1em;
+    margin-right: 5em;
+}
+
+.PDinformation {
+    font-size: 17px;
+    margin-left: 2em;
+    text-align: center;
+    width: calc(100vw - 250px);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Episodes styling */
+.PDepisodes ul {
+    padding-left: 0;
+}
+
+.episode-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    list-style: none;
+}
+
+/* Button styling */
+.add-to-playlist-btn {
+    padding: 8px 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-playlist-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.add-to-playlist-btn:active {
+    background-color: #388E3C;
+    transform: scale(0.95);
+}
+
+/* General improvements */
+.PDepisodes {
+    margin-top: 20px;
+}
+
+.episode-item span {
+    font-size: 1.1em;
+}
+
+/* \/\/\/\/\/ Navbar Styling \/\/\/\/\/ */
+nav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  float: left;
+  padding: 30px 0px;
+  background-color: black;
+}
+
+nav .heading {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  display: inline;
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+
+nav ul li {
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: #eae8e4;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+#nav-footer {
+    color: #fff;
+    margin-top: 25px;
+    margin:20px;
+    margin-bottom: 20px;
+    bottom: 0;
+    font-size: small;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#navlogo {
+  display: block;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ^^^^^^ Navbar Styling ^^^^^^ */
+
+/* \/\/\/\/\/ podcastDescription Styling \/\/\/\/\/ */
+#podcastDescription{
+    margin-left: 250px;
+}
+
+#podcastDescription h2 {
+    min-width:100vw;
+    color: #333;
+    font-size: 3em;
+    margin-top: 0;
+    text-align: center;
+}
+
+#podcastDescriptionImage{
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+}
+
+#podcastDescription div {
+    margin: em;
+}
+
+.PDname, .PDcategories, .PDdescription, .PDlanguage, .PDwebsite, .PDepisodes {
+    margin: 1em;
+    text-align:center;
+}
+
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.navigation-arrows a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #000000;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navigation-arrows a:hover {
+  background-color: #2c2f33;
+  transform: scale(1.05);
+}
+
+.navigation-arrows a:active {
+  background-color: #003d80;
+  transform: scale(0.95);
+}
+
+/* Reviews styling */
+.PDreviews {
+    margin-top: 20px;
+}
+
+.PDaddReview {
+    margin-top: 10px;
+}
+
+.PDepisodes {
+    margin-top: 40px; /* Increase the space between reviews and episodes */
+}

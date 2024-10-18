@@ -1,0 +1,480 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* NAVBAR Styling */
+
+
+/* HEADER Styling */
+
+.header-container {
+  margin-left:250px;
+  min-width:calc(100vw - 250px);
+}
+.header-container #main{
+  /*margin-left:0px;*/
+  min-width:calc(100vw - 250px);
+  text-align:center;
+  margin: auto;
+}
+
+#header, #PDheader {
+  background:black;
+  color: white;
+  border-bottom: 1px solid #e0e4e8;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin-right:0;
+}
+
+
+.copyright {
+  color: white;
+  font-size: 0.9em;
+}
+
+.description {
+  margin-left: 20px;
+}
+
+.podcastdescription, .descriptionabout, .homepage-podcasts-label {
+  text-align: center;
+}
+.descriptionabout, .homepage-podcasts-label {
+  font-size: 2em;
+  font-weight: bold;
+}
+.homepage-podcasts-label{
+    margin-top:1em;
+}
+.podcast-search-header{
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.PDbody {
+    display: flex;
+    flex-direction: row;
+    margin-top:1em;
+    margin-left:1em;
+    margin-right: 5em;
+}
+.PDinformation {
+    font-size: 17px;
+    margin-left: 2em;
+    text-align: center;
+    width: calc(100vw - 250px);
+}
+ul {
+  list-style-type: none;
+}
+
+
+/* \/\/\/\/\/ Navbar Styling \/\/\/\/\/ */
+nav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  float: left;
+  padding: 30px 0px;
+  background-color: black;
+}
+
+nav .heading {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  display: inline;
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+
+nav ul li {
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover {
+  background-color: #eae8e4;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+
+#nav-footer {
+color: #fff;
+margin-top: 25px;
+margin:20px;
+margin-bottom: 20px;
+bottom: 0;
+font-size: small;
+text-align: center;
+word-wrap: break-word;
+}
+
+#navlogo {
+  display: block;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ^^^^^^ Navbar Styling ^^^^^^ */
+
+/* \/\/\/\/\/ catalogue Styling \/\/\/\/\/ */
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.podcast-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.podcast-item {
+  flex: 1 1 calc(20% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+  max-width: calc(20% - 20px);
+}
+
+.podcast-list {
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  max-width: 100%;
+}
+
+.podcast-list img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.podcast-list span {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .podcast-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .podcast-item {
+    flex: 1 1 100%;
+  }
+}
+
+#alphabet-navigation {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 20px;
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  max-width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+#alphabet-navigation a {
+  margin: 0 5px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s;
+}
+
+#alphabet-navigation a:hover {
+  background-color: #ddd;
+}
+
+#alphabet-navigation a.active {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+}
+/* ^^^^^^ catalogue Styling ^^^^^^ */
+
+/* \/\/\/\/\/ podcastDescription Styling \/\/\/\/\/ */
+#podcastDescription{
+    margin-left: 250px;
+}
+#podcastDescription h2 {
+    min-width:100vw;
+    color: #333; /* Dark color for better readability */
+    font-size: 3em; /* Adjust font size for the title */
+    margin-top: 0; /* Remove top margin */
+    text-align: center;
+}
+
+#podcastDescriptionImage{
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+}
+
+#podcastDescription div {
+    margin: em;
+}
+
+.PDname, .PDcategories, .PDdescription, .PDlanguage, .PDwebsite, .PDepisodes {
+    margin: 1em;
+    text-align:center;
+}
+
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.navigation-arrows a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #000000;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navigation-arrows a:hover {
+  background-color: #2c2f33;
+  transform: scale(1.05);
+}
+
+.navigation-arrows a:active {
+  background-color: #003d80;
+  transform: scale(0.95);
+}
+
+/* ^^^^^^^^^^ podcastDescription Styling ^^^^^^^^^^ */
+
+.podcast-search-form {
+    text-align: center;
+    margin-top: 0em;
+}
+
+#search-input {
+    margin-left:1px;
+}
+
+#search-input, #select-category, #search-submit-button, #search-reset-button {
+    padding:5px;
+}
+
+#search-description {
+    text-align: center;
+    color: grey;
+    font-size: 15px;
+    padding: 3px;
+    margin-top:7px;
+}
+
+/* ^^^^^^^^^^ form ^^^^^^^^^^ */
+form {
+    background-color: #f5f5f5; /* light background to contrast with the black theme */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* center the form */
+}
+
+.formwrapper {
+    text-align: center;
+}
+
+h1.title {
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 1rem;
+    color: #00000;
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #000000; /* black background for the submit button */
+    color: #ffffff; /* white text for the submit button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #444444; /* slightly lighter on hover */
+}
+
+/* Styling for error messages */
+.errors {
+    color: #ff0000; /* red for error messages */
+    font-size: 0.9rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Header Styling */
+#playlistContainer {
+  margin-left: 0px;
+  min-width: calc(100vw - 250px);
+  display: flex;
+  justify-content: center;
+}
+
+#playlistMain {
+  padding: 1em;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.playlist-item span {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 80%;
+  text-align: left;
+}
+
+.playlist-item button {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  flex-basis: 100px;
+}
+
+.playlist-item button:hover {
+  background-color: #e03e3e;
+}
+
+.flash-messages {
+    margin: 20px;
+    padding: 10px;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.flashes {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flashes li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flashes li.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flashes li.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast Catalogue</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="header-container">
+        {% include 'header.html' %}
+        <main id="main">
+          <div id="alphabet-navigation">
+            {% for letter in letters %}
+              <a href="{{ url_for('catalogue_bp.show_podcasts', letter=letter) }}" class="{% if letter == current_letter %}active{% endif %}">
+                {{ letter }}
+              </a>
+            {% endfor %}
+          </div>
+          
+          <div id="podcast">
+            <ul class="podcast-grid">
+              {% for podcast in podcasts %}
+              <li class="podcast-item">
+                <a href="{{ url_for('podcast_description_bp.show_podcast_description', podcast_id=podcast.id, rendered_by_catalogue = True) }}">
+                  <div class="podcast-list">
+                    <img src="{{ podcast.image }}" alt="{{ podcast.title }}">
+                    <span>{{ podcast.title }}</span>
+                  </div>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+        </main>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Playlist</title>
+    <link
+      rel="stylesheet" href="../static/css/playlist.css"
+    />
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="header-container">
+        {% include 'header.html' %}
+        <main id="main">
+            <div id="playlistContainer">
+                <div id="playlistMain">
+                    <h1>My Playlist</h1>
+                    <div id="playlistContent">
+                        {% if playlist %}
+                            <ul>
+                            {% for episode in playlist.episodes %}
+                                <li class="playlist-item">
+                                    <a href="{{ url_for('podcast_description_bp.show_podcast_description', podcast_id=episode.podcast_id, rendered_by_catalogue = False) }}>{{ episode.title }}">{{ episode.title }}</a>
+                                    <form method="POST" action="{{ url_for('playlist_bp.remove_from_playlist', episode_id=episode.id) }}">
+                                        <button type="submit">Remove</button>
+                                    </form>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p>Your playlist is empty. Add some episodes to get started!</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

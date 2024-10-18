@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* NAVBAR Styling */
+
+
+/* HEADER Styling */
+
+.header-container {
+  margin-left:250px;
+  min-width:calc(100vw - 250px);
+}
+.header-container #main{
+  min-width:calc(100vw - 250px);
+  text-align:center;
+  margin: auto;
+}
+
+#header {
+  background:black;
+  color: white;
+  border-bottom: 1px solid #e0e4e8;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin-right:0;
+}
+
+
+
+/* \/\/\/\/\/ Navbar Styling \/\/\/\/\/ */
+nav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  float: left;
+  padding: 30px 0px;
+  background-color: black;
+}
+
+nav .heading {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  display: inline;
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+
+nav ul li {
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: #eae8e4;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+#nav-footer {
+    color: #fff;
+    margin-top: 25px;
+    margin:20px;
+    margin-bottom: 20px;
+    bottom: 0;
+    font-size: small;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#navlogo {
+  display: block;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ^^^^^^ Navbar Styling ^^^^^^ */
+
+#playlistContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+#playlistContent .playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+#playlistContent .playlist-item span {
+  font-size: 18px;
+}
+
+#playlistContent .playlist-item form {
+  margin: 0;
+}
+
+#playlistContent .playlist-item button {
+  background-color: #ff4c4c;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#playlistContent a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Keeps the text color the same as surrounding text */
+    cursor: default; /* Default cursor */
+}
+
+#playlistContent a:hover {
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+}
+

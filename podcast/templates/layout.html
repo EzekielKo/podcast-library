@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Podcast Library</title>
+    <link
+      rel="stylesheet"
+      href="../static/css/main.css"
+    />
+	<link
+      rel="icon"
+      href="../static/favicon.ico"
+    />
+</head>
+
+<body>
+    <div id="body">
+        <nav>
+          <img id="logo" src="../static/logo.png" />
+          <div class="heading">Pod Library</div>
+          <div class="navbar">
+            <ul>
+              <li><a href="./layout.html">Home</a></li>
+              <li><a href="./catalogue.html">Podcasts</a></li>
+              <li><a href="#Playlists">My Playlists</a></li>
+            </ul>
+          </div>
+          <div id="nav-footer">
+            CS235 bsan361 |  arav428 | xye804 | nkaw981
+          </div>
+        </nav>
+        <div id="content-2">
+            {% include 'header.html' %}
+            <div id="container">
+              <main id="main">
+                <div class="search-container">
+                    <input type="text" placeholder="Search Podcast..." class="search-input">
+                    <button class="search-button">Search</button>
+                </div>
+              </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

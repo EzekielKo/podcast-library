@@ -1,0 +1,29 @@
+<nav>
+    <img id="navlogo" src="../static/images/podcast_logo.jpg" />
+    <div class="heading">Pod Library</div>
+    <div class="navbar">
+      <ul>
+        <li><a href="{{ url_for('home_bp.show_home') }}">Home</a></li>
+        <li><a href="{{ url_for('catalogue_bp.show_podcasts') }}">Podcasts</a></li>
+          <li><a href="{{ url_for('podcast_search_bp.show_podcast_search') }}">Search Podcast</a></li>
+        <li><a href="{{ url_for('authentication_bp.register') }}">Register</a></li>
+          <li><a href="{{ url_for('authentication_bp.login') }}">Login</a></li>
+          <li><a href="{{ url_for('authentication_bp.logout') }}">Logout</a></li>
+        <li><a href="{{ url_for('playlist_bp.show_playlist') }}">My Playlist</a></li>
+      </ul>
+    </div>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+                <div class="alert {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+    <div id="nav-footer">
+      CS235 ajhz964 | jbad180 | eko034
+    </div>
+</nav>

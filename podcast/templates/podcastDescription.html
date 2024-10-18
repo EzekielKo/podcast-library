@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast Description</title>
+    <link rel="stylesheet" href="../static/css/description.css" />
+</head>
+<body>
+    <div id="podcastDescriptionContainer">
+        {% include 'navbar.html' %}
+
+        <div id="podcastDescriptionMain">
+            <div id="podcastDescription">
+                {% include 'PodcastDescriptionHeader.html' %}
+                <div class="PDbody">
+                    <div>
+                        <img id="podcastDescriptionImage" src="{{ podcast.image }}" alt="podcast image">
+                        <div class="PDname"><strong>Author:</strong> <br>{{ podcast.author }} </div>
+                        <div class="PDcategories"><strong>Categories:</strong><br> {{ podcast.categories | join(', ') }} </div>
+                        <div class="PDreviews"><strong>Reviews:</strong>
+                        {% if podcast.reviews %}
+                           <ul>
+                           {% for review in podcast.reviews %}
+                               <li>
+                                   <div class="review">
+                                        <strong>{{ review.user.username }}</strong> ({{ review.rating }} / 5 stars) - {{ review.content }}
+                                    </div>
+                               </li>
+                           {% endfor %}
+                           </ul>
+                       {% else %}
+                           No reviews available
+                       {% endif %}
+                    </div>
+                    <div class="PDaddReview">
+    <a href="{{ url_for('podcast_description_bp.review_on_podcast', podcast=podcast.id) }}">
+        <button type="button" class="add-review-btn"> Add Review</button>
+    </a>
+</div>
+                        <div class="PDaverageRating">
+                            <strong>Average Rating:</strong><br>
+                                {% if podcast.average_rating > 0 %}
+                                    {{ podcast.average_rating }} / 5
+                                {% else %}
+                                    No ratings yet
+                                {% endif %}
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Episodes Section Below -->
+                    <div class="PDinformation">
+                        <div class="PDdescription"><strong>Description:</strong><br> {{ podcast.description }} </div>
+                        <div class="PDlanguage"><strong>Language:</strong><br> {{ podcast.language }} </div>
+                        <div class="PDwebsite"><strong>Website:</strong><br> {{ podcast.website }} </div>
+
+                        <div class="PDepisodes"><strong>Episodes:</strong>
+    {% if podcast.episodes %}
+        <ul>
+            {% for episode in podcast.episodes %}
+                <li class="episode-item">
+                    <span>{{ episode.title }}</span>
+                    {% if playlist %}
+                        {% if episode in playlist.episodes %}
+                            <span>Already in playlist</span>
+                        {% else %}
+                            <form method="POST" action="{{ url_for('podcast_description_bp.add_to_playlist', podcast_id=podcast.id, episode_id=episode.id) }}">
+                                <!-- Include hidden field to pass rendered_by_catalogue value -->
+                                <input type="hidden" name="rendered_by_catalogue" value="{{ 'True' if rendered_by_catalogue else 'False' }}">
+                                <button type="submit" class="add-to-playlist-btn">Add to Playlist</button>
+                            </form>
+                        {% endif %}
+                    {% else %}
+                        <form method="POST" action="{{ url_for('podcast_description_bp.add_to_playlist', podcast_id=podcast.id, episode_id=episode.id) }}">
+                            <!-- Include hidden field to pass rendered_by_catalogue value -->
+                            <input type="hidden" name="rendered_by_catalogue" value="{{ 'True' if rendered_by_catalogue else 'False' }}">
+                            <button type="submit" class="add-to-playlist-btn">Add to Playlist</button>
+                        </form>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        No episodes available
+    {% endif %}
+</div>
+                    </div>
+                </div>
+
+                {% if rendered_by_catalogue %}
+<div class="navigation-arrows">
+    {% if previous_id %}
+        <a href="{{ url_for('podcast_description_bp.show_podcast_description', podcast_id=previous_id, rendered_by_catalogue=True) }}">← Previous</a>
+    {% endif %}
+    {% if next_id %}
+        <a href="{{ url_for('podcast_description_bp.show_podcast_description', podcast_id=next_id, rendered_by_catalogue=True) }}">Next →</a>
+    {% endif %}
+</div>
+{% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
